@@ -1,0 +1,10 @@
+[debug] > Exec(scalafmt, None, None)
+[debug] Evaluating tasks: Compile / scalafmt
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[error] scalafmt: format all files; [git ls-files] (C:\Users\ramil\IdeaProjects\scala_project): Failed to run command git rev-parse --show-toplevel. Error:
+[error] > fatal: not a git repository (or any of the parent directories): .git
+[info] scalafmt: Formatting 5 Scala sources (C:\Users\ramil\IdeaProjects\scala_project)...
+[info] scalafmt: Reformatted 3 Scala sources
+[debug] Forcing garbage collection...
+[success] Total time: 1 s, completed 20 мар. 2024 г., 12:14:40
+[debug] > Exec(idea-shell, None, None)

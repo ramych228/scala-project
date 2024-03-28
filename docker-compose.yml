@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+  app:
+    container_name: scala-app
+    image: docker-scala-img
+    environment:
+      DB_URL: postgres
+      DB_USER: user
+      DB_PASS: password
+      DB_NAME: mydb
+    ports:
+      - "12345:8080"
+    depends_on:
+      - "postgres"
+
+volumes:
+  postgres:
